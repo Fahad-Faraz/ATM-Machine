@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="atmmachine">
-        <div class="atm">
-    <h5>ATM</h5>
-    <h3>Any time money</h3>
-    <div class="fahad">
-        <P>enter your card number</P>
-    <input type="enter">
-    <p>enter your cvc number</p>
-    <input type="enter">
-    <P>enter your expiredate</P>
-    <input type="enter">
-    <P>enter your  balance</P>
-    <input type="enter">
-    <P>Enter any amount you want to credit</P>
-    <input type="enter">
-    
-    </div>
-    <button>Enter</button>
-    </div>
-    </div>
     <script src="./index.js"></script>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+    <div class="navbar">
+    <h1>ATM Machine</h1>
+    <input  type="number" placeholder="Enter your card-number!" id="cardnumber"><br>
+    <input type="number" placeholder="Enter your CVC!" id="cvc"><br>
+    <input type="number" placeholder="Enter your expireDate!" id="expire"><br>
+  
+    <button onclick="login()">SUMBIT</button>
+    <div id="atm" style="display:none;">
+        <input type="number" placeholder="Enter your Withdraw" id="widthdraw">
+        <button onclick="fahad()">Withdraw</button>
+    </div>
+</div>
 
+   </div>
+
+
+   <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>

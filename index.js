@@ -1,38 +1,32 @@
-
-
-
-
-let card_number = +prompt("Enter your card nummber");
-let cvc_number = +prompt("Enter your cvc number");
-let expiredate = prompt("Enter your card expiredate");
-
-if(card_number === 12345 && cvc_number === 5555 && expiredate === "3/3/29"){
-    //alert("successfully activated")
-
-    balance = +prompt("Enter your balance");
-    amount = +prompt("Enter any amount you want to credit");
-    
-
-    if(amount < balance){
-        let remaining_balance = balance - amount
-        alert("transaction succesfully! remmaining balance: RS" + remaining_balance );   
+const correct = '12345'; 
+const number = '5555'; 
+const ExpiryDate = '3/3/29'; 
+function login() {
+    const card_Number = document.getElementById("cardnumber").value;
+    const cvc = document.getElementById("cvc").value;
+    const expire = document.getElementById("expire").value
+    if (card_Number === correct && cvc === number && expire === ExpiryDate) {
+      document.getElementById("atm").style.display = "block";
+      alert("succesfully!")
+    } 
+    else {
+      alert("Please Try Again Latter!")
     }
-    
-    else if(amount > balance){
+}
+
+let balance = 4000;
+
+function fahad(){
+    let amount = prompt("Enetr your withdraw:")
+    alert("Withdraw" + amount + "INR")
+    if (balance >= amount) {
+        balance -= amount;
+        document.getElementById('balance').innerHTML = balance;
+        alert("Insufficient balance!");
+    } 
+    else {
         alert("amount is unsufficient");
-    }
-    else if(amount === balance){
-        alert("transaction succesfull! your balance is now 0" );
-    }
-}
 
-else if(card_number !== 12345){
-    alert("unsuccesfull: Incorrect card number");
-}
-else if(cvc_number !== 5555){
-    alert("unsuccesfull: Incorrect cvc number");
-}
-else if(expiredate !== "3/3/29"){
-    alert("unsuccesfull: Incorrect expirydate");
-}
+    }
 
+}
